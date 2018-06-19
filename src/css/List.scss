@@ -1,0 +1,14 @@
+.list {
+    padding: 10px;
+    background-color: gainsboro;
+    height: 100%;
+}
+
+.list__table {
+    width: 45%;
+    height: -webkit-fill-available;
+    display: inline-table;
+    background-color: white;
+    border: 1px solid grey;
+    border-radius: 3px;
+}

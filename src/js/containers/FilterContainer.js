@@ -5,7 +5,7 @@ import SearchBar from '../components/SearchBar'
 class FilterContainer extends Component {
   render() {
     return (
-      <div>
+      <div className="filter__container">
           <SortButton />
           <SearchBar />
       </div>

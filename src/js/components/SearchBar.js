@@ -2,7 +2,7 @@ import React from 'react';
 
 function SearchBar (props) {
     return (
-      <input type="text" value="Type to search..." />
+      <input type="text" defaultValue="Type to search..." className="filter__search"/>
     );
 }
 

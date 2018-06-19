@@ -3,7 +3,7 @@ import Row from './Row'
 
 function Table (props) {
     return (
-      <div>
+      <div className="list__table">
           <Row />
           <Row />
           <Row />

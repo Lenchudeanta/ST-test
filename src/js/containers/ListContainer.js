@@ -5,7 +5,7 @@ import Description from '../components/Description'
 class ListContainer extends Component {
   render() {
     return (
-      <div>
+      <div className="list">
           <Table />
           <Description />
       </div>
