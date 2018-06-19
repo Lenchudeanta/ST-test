@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
 import FilterContainer from './containers/FilterContainer'
-import './App.css';
+import ListContainer from './containers/ListContainer'
 
 class App extends Component {
   render() {
     return (
-      <FilterContainer />
+      <div>
+        <FilterContainer />
+        <ListContainer />
+      </div>
     );
   }
 }
