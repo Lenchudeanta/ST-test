@@ -7,9 +7,26 @@
 
 .filter__sort-button {
     margin-right: 20px;
+    width: 15%;
+    display: inline-block;
+}
+
+.filter__sort-panel {
+    background-color: lightgrey;
+    border: 1px solid grey;
+    width: 100px;
+    margin-top: 0;
+}
+
+.filter__sort-panel--hidden {
+    display: none;
 }
 
 .filter__search {
-    width: 90%;
+    width: 80%;
     float: right;
+}
+
+.filter__search-bar {
+    width: 100%;
 }
