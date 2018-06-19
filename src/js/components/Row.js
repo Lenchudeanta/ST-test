@@ -2,7 +2,7 @@ import React from 'react';
 
 function Row (props) {
     return (
-      <div className="list__row">Episode V - The Empire strikes back"</div>
+      <div className="list__row" onClick={() => props.selectMovie(props.movie.description)}>{props.movie.title}</div>
     );
 }
 
