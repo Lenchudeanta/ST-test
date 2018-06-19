@@ -23,6 +23,8 @@ class FilterContainer extends Component {
           <SortButton
             isPanelHidden={this.state.isPanelHidden}
             managePanel={this.showPanel}
+            sortBy={this.props.sortBy}
+            sortMode={this.props.sortMode}
           />
           <SearchBar />
       </div>
