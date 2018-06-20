@@ -26,7 +26,7 @@ class FilterContainer extends Component {
             sortBy={this.props.sortBy}
             sortMode={this.props.sortMode}
           />
-          <SearchBar />
+          <SearchBar filterMovies={this.props.filterMovies} />
       </div>
     );
   }

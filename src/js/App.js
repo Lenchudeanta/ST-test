@@ -13,12 +13,17 @@ class App extends Component {
     };
     this.sorting = this.sorting.bind(this);
     this.getMovies = this.getMovies.bind(this);
+    this.filterMovies = this.filterMovies.bind(this);
   }
 
   sorting = (parameter) => {
     this.setState({
       sortBy: parameter
     });
+  }
+
+  filterMovies = (input) => {
+    console.log(input.target.value);
   }
 
   getMovies () {
@@ -49,6 +54,7 @@ class App extends Component {
         <FilterContainer
           sortBy={this.state.sortBy}
           sortMode={this.sorting}
+          filterMovies={this.filterMovies}
         />
         <ListContainer
           sortBy={this.state.sortBy}
