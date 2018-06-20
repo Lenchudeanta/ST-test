@@ -14,6 +14,7 @@ class App extends Component {
     this.sorting = this.sorting.bind(this);
     this.getMovies = this.getMovies.bind(this);
     this.filterMovies = this.filterMovies.bind(this);
+    this.allMovies = [];
   }
 
   sorting = (parameter) => {
@@ -23,13 +24,18 @@ class App extends Component {
   }
 
   filterMovies = (input) => {
-    console.log(input.target.value);
+    var regexp = new RegExp(input.target.value, 'i');
+    var matchedMovies = this.allMovies.filter(movie => regexp.test(movie.fields.title));
+    this.setState({
+      movies: matchedMovies
+    });
   }
 
   getMovies () {
     fetch(API).then(response => {
       if (response.status === 200) {
         return response.json().then(response => {
+          this.allMovies = response;
           this.setState({
             movies: response
           });
