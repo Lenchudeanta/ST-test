@@ -3,12 +3,14 @@ import {sortBy, map} from 'lodash'
 import Table from '../components/Table'
 import Description from '../components/Description'
 
+const NO_MOVIE = "No movie selected";
+
 class ListContainer extends Component {
   constructor(props) {
     super(props);
     this.state = {
       title: "",
-      description: "No movie selected",
+      description: NO_MOVIE,
       director: ""
     };
     this.selectMovie = this.selectMovie.bind(this);
