@@ -1,0 +1,55 @@
+body {
+    background-color: gainsboro;
+}
+
+.list {
+    display: block;
+    padding: 10px;
+    height: fit-content;
+}
+
+.list__table {
+    width: 45%;
+    height: fit-content;
+    display: inline-table;
+    background-color: white;
+    border: 1px solid grey;
+    border-radius: 3px;
+}
+
+.list__table.list__table--description {
+    float: right;
+}
+
+.list__row {
+    padding: 5px 20px;
+}
+.list__row:hover {
+    cursor: pointer;
+    background-color: gainsboro;
+}
+
+.list__row:hover {
+    cursor: pointer;
+    background-color: gainsboro;
+}
+
+.list__row-year {
+    float: right;
+}
+
+.list__row-title {
+    margin: 0px 20%;
+}
+
+.list__table-desctitle {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600
+}
+
+.list__table-desctitle,
+.list__table-descdirector,
+.list__table-desc {
+    padding: 25px;
+}
