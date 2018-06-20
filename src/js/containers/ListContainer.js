@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {sortBy} from 'lodash'
+import {sortBy, map} from 'lodash'
 import Table from '../components/Table'
 import Description from '../components/Description'
 
@@ -7,6 +7,7 @@ class ListContainer extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      title: "",
       description: "No movie selected"
     };
     this.selectMovie = this.selectMovie.bind(this);
@@ -14,16 +15,22 @@ class ListContainer extends Component {
 
   selectMovie = (chosenMovie) => {
     this.setState({
-      description: chosenMovie
+      title: chosenMovie.title,
+      description: chosenMovie.opening_crawl
     });
   }
 
   render() {
-    var data = sortBy(this.props.listMovies, [this.props.sortBy]);
+    var data = [];
+    data = map(this.props.listMovies, "fields");
+    data = sortBy(data, [this.props.sortBy]);
     return (
       <div className="list">
           <Table data={data} selectMovie={this.selectMovie} />
-          <Description description={this.state.description} />
+          <Description
+            description={this.state.description}
+            title={this.state.title}
+          />
       </div>
     );
   }
