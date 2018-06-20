@@ -1,12 +1,16 @@
-.list {
-    padding: 10px;
+body {
     background-color: gainsboro;
-    height: 100%;
+}
+
+.list {
+    display: block;
+    padding: 10px;
+    height: fit-content;
 }
 
 .list__table {
     width: 45%;
-    height: -webkit-fill-available;
+    height: fit-content;
     display: inline-table;
     background-color: white;
     border: 1px solid grey;
@@ -19,11 +23,10 @@
 
 .list__row {
     padding: 5px 20px;
-
-    &:hover {
-        cursor: pointer;
-        background-color: gainsboro;
-    }
+}
+.list__row:hover {
+    cursor: pointer;
+    background-color: gainsboro;
 }
 
 .list__row:hover {
@@ -48,5 +51,5 @@
 .list__table-desctitle,
 .list__table-descdirector,
 .list__table-desc {
-    padding: 30px;
+    padding: 25px;
 }
