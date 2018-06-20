@@ -8,7 +8,8 @@ class ListContainer extends Component {
     super(props);
     this.state = {
       title: "",
-      description: "No movie selected"
+      description: "No movie selected",
+      director: ""
     };
     this.selectMovie = this.selectMovie.bind(this);
   }
@@ -16,7 +17,8 @@ class ListContainer extends Component {
   selectMovie = (chosenMovie) => {
     this.setState({
       title: chosenMovie.title,
-      description: chosenMovie.opening_crawl
+      description: chosenMovie.opening_crawl,
+      director: chosenMovie.director
     });
   }
 
@@ -30,6 +32,7 @@ class ListContainer extends Component {
           <Description
             description={this.state.description}
             title={this.state.title}
+            director={this.state.director}
           />
       </div>
     );
